@@ -125,7 +125,7 @@ trait ItemComponentsTrait {
 			}
 		}
 
-        if($this->isUnbreakable()){
+        if($this instanceof Durable && $this->isUnbreakable()){
             $this->addComponent(new UnbreakableComponent(true));
         }
 	}
